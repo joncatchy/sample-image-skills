@@ -1,2 +1,2 @@
-# sample-video-skills
-Community created Box Skills samples, processing video files on Box 
+# sample-image-skills
+Community created Box Skills samples, processing image files on Box 
