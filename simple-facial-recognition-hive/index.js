@@ -32,11 +32,11 @@ module.exports = async (ctx, cb) => {
     const hiveResponse = await rp(options);
 
     // Transform Hive's response into a properly-formatted data list
-    const data = processHiveResponse(hiveResponse);
+    const facesDataList = processHiveResponse(hiveResponse);
 
     // Save the Topics metadata card to Box
     const cards = [];
-    cards.push(skillsWriter.createTopicsCard(data, null, 'items'));
+    cards.push(skillsWriter.createTopicsCard(facesDataList, null, 'faces'));
     await skillsWriter.saveDataCards(cards);
   } catch (error) {
     // On errors, we can save an Error metadata card to Box
