@@ -7,4 +7,4 @@ Hive offers image classification as a service, and can provide a custom model th
 For more info on Hive's API, please refer to their [docs](https://thehive.ai/docs#hive-predict-api). 
 
 
-![example](https://i.imgur.com/yoItD4T.png)
+![example](/screenshot.jpg)

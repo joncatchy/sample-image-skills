@@ -1,7 +1,7 @@
 {
-  "name": "basic-face-recognition-hive-webtask",
+  "name": "hive-predict-face-recognition",
   "version": "1.0.0",
-  "description": "A basic face recognition skill with HiveAI and Auth0 WebTask",
+  "description": "A basic face recognition skill with Hive Predict",
   "main": "index.js",
   "author": "Shawn Taxerman",
   "license": "Apache-2.0",
