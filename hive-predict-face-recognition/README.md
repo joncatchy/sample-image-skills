@@ -3,6 +3,8 @@
 This is a simple, generic example of a custom face recognition skill for images using the [Box Skills Kit](https://github.com/box/box-skills-kit-nodejs)
 and [Hive Predict](https://thehive.ai/docs#hive-predict-api).
 
+![screenshot](/screenshots/obama_and_joe.jpg)
+
 ### Getting started with Hive
 
 Hive offers image classification as a service, and can provide a custom model that is trained to classify faces for your specific use case. To get started,
@@ -26,17 +28,21 @@ The following demonstrates how to quickly deploy to [Webtask](https://webtask.io
 
     ```wt init```
 
-4) Clone the sample repo:
+4) Clone the samples repo and switch to the hive-predict folder:
 
-    ``` git clone GIT_REPO_URL hive-predict-sample && cd hive-predict-sample```
+    ``` git clone https://github.com/box-community/sample-image-skills.git && cd hive-predict-face-recognition```
 
 5) Create a new Webtask:
 
-    ```create index.js --name hive-predict-sample --bundle```
+    ```wt create index.js --name hive-predict-sample --bundle```
 
     The output of which will be a URL through which the webtask is available. This is the URL you will provide to Box when configuring your skill. 
 
+    **Note**: Don't forget to update `index.js` with your specific Hive API endpoint and key. 
 
 
 
-![example](/screenshot.jpg)
+![screenshot](/screenshots/bill_and_neil.jpg)
+
+
+
