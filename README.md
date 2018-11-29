@@ -17,3 +17,8 @@ For more information on using the Skills Kit, head over to our [developer docume
 ## How do I deploy a Box Skill?
 
 Hava a look at our [quick start deployment instructions](https://github.com/box/box-skills-kit-nodejs/tree/master/custom-skill-example-code) to learn how to deploy any of our samples skills.
+
+
+## License
+
+This project is licensed under the [Apache 2.0 License](LICENSE]
