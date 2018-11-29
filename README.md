@@ -21,4 +21,4 @@ Hava a look at our [quick start deployment instructions](https://github.com/box/
 
 ## License
 
-This project is licensed under the [Apache 2.0 License](LICENSE]
+This project is licensed under the [Apache 2.0 License](LICENSE)
