@@ -4,9 +4,7 @@ These are community created Box Skills samples for processing **image files** on
 
 Box supports [the following image formats](https://community.box.com/t5/How-to-Guides-for-Managing/File-Types-and-Fonts-Supported-in-Box-Content-Preview/ta-p/327) for direct preview in Box.
 
-
 * [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as metadata to the images in Box.
-
 
 ## What are Box Skills?
 

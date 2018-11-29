@@ -3,7 +3,7 @@
 This is a simple, generic example of a custom face recognition Box Skill for images using the [Box Skills Kit](https://github.com/box/box-skills-kit-nodejs)
 and the [Hive Predict API](https://thehive.ai/docs#hive-predict-api).
 
-![Example image with Obama and Joe](docs/obama_and_joe.jpg)
+![Example image with Obama and Joe](docs/obama_and_joe.png)
 
 ## Usage
 
