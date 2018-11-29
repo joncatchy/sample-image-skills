@@ -1,48 +1,57 @@
-# Face Recognition on Images with Hive Predict
+# Hive Predict Face Recognition
 
-This is a simple, generic example of a custom face recognition skill for images using the [Box Skills Kit](https://github.com/box/box-skills-kit-nodejs)
-and [Hive Predict](https://thehive.ai/docs#hive-predict-api).
+This is a simple, generic example of a custom face recognition Box Skill for images using the [Box Skills Kit](https://github.com/box/box-skills-kit-nodejs)
+and the [Hive Predict API](https://thehive.ai/docs#hive-predict-api).
 
-![screenshot](/screenshots/obama_and_joe.jpg)
+![Example image with Obama and Joe](docs/obama_and_joe.jpg)
 
-### Getting started with Hive
+## Usage
+
+### Prerequisites
 
 Hive offers image classification as a service, and can provide a custom model that is trained to classify faces for your specific use case. To get started,
 
-1) [Sign up](https://thehive.ai/signup) for a free account.
+1) [Sign up](https://thehive.ai/signup) for a free Hive account.
 2) [Contact Hive](https://thehive.ai/contact-us) to set up a trial access to a pretrained model API endpoint.
 
-For more info on Hive's API, please refer to their [docs](https://thehive.ai/docs#hive-predict-api). 
+For more info on Hive's API, please refer to their [documentation](https://thehive.ai/docs#hive-predict-api). 
+
+### Configuring Serverless
+
+Our Box skills uses the excellent [Serverless framework](https://serverless.com/). This framework allows for deployment to various serverless platforms, but in this example we will use AWS as an example.
+
+To use Serverless, install the NPM module.
+
+```bash
+npm install -g serverless
+```
+
+Next, follow our guide on [configuring Serverless for AWS](../AWS_CONFIGURATION.md), or any of the guides on [serverless.com](https://serverless.com/) to allow deploying to your favorite serverless provider.
 
 ### Deploying
 
-There are many available options for deploying and hosting your skills function (AWS Lambda, Google Cloud Functions, OpenWhisk, etc.).
-The following demonstrates how to quickly deploy to [Webtask](https://webtask.io/). For detailed installation and deployment instructions, check out the Webtask [docs](https://webtask.io/docs/101).
+Clone this repo and change into the Rossum folder.
 
-1) [Create an account](https://webtask.io/login) by linking to your Github, Facebook, or Google account.
+```bash
+git clone https://github.com/box-community/sample-image-skills
+cd sample-image-skills/hive-predict-face-recognition
+```
 
-2) Install the Webtask CLI:  
+Then change the `HIVE_API_ENDPOINT` and `HIVE_API_KEY` environment variables in your `serverless.yml` file to your Hive API key and endpoint URLs.
 
-    ``` npm install wt-cli -g```
-3) Authenticate to Webtask:
+```yaml
+...
 
-    ```wt init```
+functions:
+  index:
+    ...
+    environment:
+      HIVE_API_ENDPOINT: YOUR_HIVE_API_ENDPOINT
+      HIVE_API_KEY: YOUR_HIVE_API_KEY
+```
 
-4) Clone the samples repo and switch to the hive-predict folder:
+Finally, deploy the Skill.
 
-    ``` git clone https://github.com/box-community/sample-image-skills.git && cd hive-predict-face-recognition```
-
-5) Create a new Webtask:
-
-    ```wt create index.js --name hive-predict-sample --bundle```
-
-    The output of which will be a URL through which the webtask is available. This is the URL you will provide to Box when configuring your skill. 
-
-    **Note**: Don't forget to update `index.js` with your specific Hive API endpoint and key. 
-
-
-
-![screenshot](/screenshots/bill_and_neil.jpg)
-
-
-
+```bash
+serverless deploy -v
+```
