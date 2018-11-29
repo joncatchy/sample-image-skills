@@ -10,6 +10,8 @@ Box supports [the following image formats](https://community.box.com/t5/How-to-G
 
 ## What are Box Skills?
 
+Aa Box Skill is a type of application that performs custom processing for files uploaded to Box.
+
 Visit the [developer documentation](https://developer.box.com/docs/box-skills) for complete information on Box Skills, the kind of Preview Cards you can create for showing metadata, as well as a visual instructions on configuring your code for deployment.
 
 ## What is the Box Skills Kit?
