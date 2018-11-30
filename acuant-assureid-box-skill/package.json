@@ -1,0 +1,17 @@
+{
+  "name": "acuant-assureid-box-skill",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kyle Adams",
+  "license": "MIT",
+  "dependencies": {
+    "box-node-sdk": "^1.9.0",
+    "jimp": "^0.5.4",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "path": "^0.12.7",
+    "request-promise": "^4.2.2",
+    "stream-to-array": "^2.3.0",
+    "url-template": "^2.0.8"
+  }
+}
