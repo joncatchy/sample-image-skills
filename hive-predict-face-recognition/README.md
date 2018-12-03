@@ -30,7 +30,7 @@ Next, follow our guide on [configuring Serverless for AWS](../AWS_CONFIGURATION.
 
 ### Deploying
 
-Clone this repo and change into the Rossum folder.
+Clone this repo and change into the sample folder.
 
 ```bash
 git clone https://github.com/box-community/sample-image-skills
