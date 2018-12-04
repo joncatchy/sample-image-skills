@@ -1,16 +1,16 @@
-## Amazon Label Skill
+#Amazon Label Detection Skill
+##Use the Amazon [Rekognition API](https://aws.amazon.com/rekognition/) to automatically extract labels from images and add them to your image files as metadata.
 
-### Functionality of this skill:
-This skill will take an image uploaded to Box and use Amazon Rekognition to assign labels to the image.
+Amazon Rekognition provides image and video analysis. The [DetectLabels](https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectLabels.html) endpoint that is used in this application detects instances of real-world entities that are captured in a provided image. The data that can be returned from using this skill is usually objects, events, or concepts that are present in the image provided (see screenshots folder for example return data)
 
-### Using this skill:
-Install the required packages by running `npm install` in the root directory of this project
-
-Either use the npm tool `serverless` to deploy the zip file to your AWS lambda function as specified in the Skillskit 2.0 instructions, or zip and upload the root folder of this project to your AWS lambda function
-
-In your AWS account, ensure that you have permissioned the identity that will be using the skill to have access to the Rekognition services in the Identity Access Management (IAM) portal within AWS. The policy should look similar to this:
-```
-{
+#Usage
+##Prerequisites
+Make sure to have an AWS account
+Make sure to sign up for a Box Developer account and prepare your app for Box skills. See our developer documentation for more guidance.
+Ensure that you have given your AWS user who will be executing the skill access to the Rekognition services
+    You can find these settings in the Identity Access Managment (IAM) portal in the AWS console
+    The permissions for this user should look similar to the code below to ensure access to Rekognition has been granted
+    ```{
     "Version": "2012-10-17",
     "Statement": [
         {
@@ -21,10 +21,34 @@ In your AWS account, ensure that you have permissioned the identity that will be
             "Resource": "*"
         }
     ]
-}
-```
-Login to your Box account developer console and create a new skill in your enterprise. Copy and paste the lambda invocation URL either from the output of the serverless function or from AWS lambda itself, and assign a folder ID to have the skill listen for image uploads on
+}```
 
-Upload and image to the folder you specified in the setup, then after a few seconds open the image up within Box to see the labels that have been added to the metadata cards on the side of the image.
+##Configuring Serverless
+Our Box skills uses the excellent Serverless framework. This framework allows for deployment to various serverless platforms, but in this example we will use AWS as an example.
 
-You can change the maximum amount of labels that will appear on the image as well as the minimum confidence level Rekognition needs to assign a label in the `index.js` file at the top. The constant `MAX_LABELS` is the maximum amount of labels that Rekognition will associate with the image and the constant `MIN_CONFIDENCE` is the percentage that Rekognition needs to have in order to assign a label. The default confidence level is 70 in this application.
+To use Serverless, install the NPM module.
+
+'npm install -g serverless'
+Next, follow our guide on configuring Serverless for AWS, or any of the guides on serverless.com to allow deploying to your favorite serverless provider.
+
+##Deploying
+Clone this repo and change directory into the amazon-label-skill folder
+
+`git clone https://github.com/box-community/sample-document-skills`
+`cd amazon-label-skill`
+
+Deploy to AWS using serverless
+`serverless deploy -v`
+
+##Frequently Asked Questions
+#Who might use this Skill?
+Business processes that rely on uploading large amounts of images and sorting / classifying these images could benefit greatly from using this skill.
+
+#What types of files does this Skill handle?
+This skill can handle .JPG, and .PNG image files 
+
+#What metadata is written back to my Box file?
+Concepts, objects, and events detected in each image file that is uploaded will be supplied as metadata on the image once the skill has finished running. For examples of specific data that is returned, please refer to the screenshots folder in this repo.
+
+#What implications does this have for my business?
+Using Box with AWS Rekognition services can greatly reduce the time needed to classify large amounts of images. Employees time spent going through large amounts of images tagging relevant information can be greatly reduced
