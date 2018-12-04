@@ -7,9 +7,10 @@ Amazon Rekognition provides image and video analysis. The [DetectLabels](https:/
 ## Prerequisites
 Make sure to have an AWS account
 Make sure to sign up for a Box Developer account and prepare your app for Box skills. See our developer documentation for more guidance.
-Ensure that you have given your AWS user who will be executing the skill access to the Rekognition services
-    You can find these settings in the Identity Access Managment (IAM) portal in the AWS console
-    The permissions for this user should look similar to the code below to ensure access to Rekognition has been granted
+Ensure that you have given your AWS identity who will be executing the skill access to the Rekognition services
+
+You can find these settings in the Identity Access Managment (IAM) portal in the AWS console
+The permissions for this user should look similar to the code below to ensure access to Rekognition has been granted.
     ```
     {
     "Version": "2012-10-17",
