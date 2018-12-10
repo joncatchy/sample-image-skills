@@ -1,41 +1,74 @@
-Government ID extraction Box Skill example powered by Acuant AssureID
-=====================================================================
+# Acuant AssureID Box Skill
+Use [Acuant AssureID](https://www.acuantcorp.com/products/assureid-identity-verification-software/) to classify and automatically extract metadata from a government-issued ID and add the metadata to content managed in Box.
+
 ![Government ID Image](/images/acuant-assure-id-skill.png)
 
-Creating and Deploying the Box Skill Example
---------------------------------------------
-1) Review the following [documentation](https://developer.box.com/docs/creating-your-a-box-skill-using-serverless).
-2) Clone this repo
-3) Install project dependencies
+## Usage
+
+### Prerequisites
+
+* [Contact Acuant](https://www.acuantcorp.com/lets-talk/) for access to the AssureID developer API's.
+* Sign up for a [Box Developer](https://developer.box.com/) account and prepare your app for Box skills. See our [developer documentation](https://developer.box.com/docs/box-skills) for more guidance. 
+
+### Configuring Serverless
+
+Our Box skills uses the excellent [Serverless framework](https://serverless.com/). This framework allows for deployment to various serverless platforms, but in this example we will use AWS as an example.
+
+To use Serverless, install the NPM module.
+
+```bash
+npm install -g serverless
 ```
-yarn install
+
+Next, follow our guide on [configuring Serverless for AWS](../AWS_CONFIGURATION.md), or any of the guides on [serverless.com](https://serverless.com/) to allow deploying to your favorite serverless provider.
+
+
+Clone this repo and change into the Rossum folder.
+
+```bash
+git clone https://github.com/box-community/acuant-assureid-box-skill
+cd sample-document-skills/acuant-assureid-box-skill
 ```
-OR
+
+Then change the `ASSURE_ID_USERNAME`, `ASSURE_ID_PASSWORD`, `ASSURE_ID_SUBSCRIPTION_ID` environment variables in your `serverless.yml`.
+
+```yaml
+...
+
+functions:
+  index:
+    ...
+    environment:
+      ASSURE_ID_USERNAME: CHANGE_ME
+      ASSURE_ID_PASSWORD: CHANGE_ME
+      ASSURE_ID_SUBSCRIPTION_ID: CHANGE_ME
 ```
-npm install
-```
-4) Install Serverless
-```
-yarn global add serverless
-```
-OR
-```
-npm intall -g serverless
-```
-5) Configure Serverless with your AWS IAM credentials
-```
-serverless config credentials --provider aws --key YOURAPIKEY --secret YOURSECRET
-```
-6) Update the folowing environment variables in the [serverless.yml](/serverless.yml) file
-  * ASSURE_ID_USERNAME
-  * ASSURE_ID_PASSWORD
-  * ASSURE_ID_SUBSCRIPTION_ID
-7) Deploy the lambda using serverless
-```
+
+Finally, deploy the Skill.
+
+```bash
 serverless deploy -v
 ```
-8) Test your AWS Lambda function
-```
-serverless invoke local --function index --data '{"key1":"value1"}'
-```
-9) Register your custom skill using the following [documentation](https://developer.box.com/docs/creating-your-a-box-skill-using-serverless#section-5-register-your-skill-application-with-box).
+
+## Frequently Asked Questions
+
+### Who might use this Skill?
+If you have ever manually identify the type of government ID and enter any data from a government ID, then this Skill might be for you. And particularly if your government ID's are part of a verification or customer on-boarding workflow. Much of this manual data entry can now be automated.
+
+### What types of files does this Skill handle?
+This skill can images with the following extensions:
+* bmp
+* png
+* tiff, tif
+* jpeg, jpg
+
+### Is there a required amount of dots per square inch (DPI)?
+DPI of 96 and above is required. For best results, a DPI of 300 is recommended.
+
+### What metadata is written back to my Box file?
+The skills populates metadata around the ID issuer (Example: Issuer = New York State), the ID-specific metadata (Example: Expiration Date = 01/01/2019), and the ID holder (Example: Name = John Doe).
+
+### What implications does this have for my business?
+Using Box with Acuant AssureID has the potential to eliminate enormous ammounts of manual data entry using automated data capture that matches human levels of accuracy.
+
+Additionally, the Box API can then kick off use case-specific workflows based on the returned metadata, like validating fraudulent applicants, flagging expired IDs, or adding retention policies based on dates.
