@@ -1,7 +1,7 @@
 # Acuant AssureID Box Skill
 Use [Acuant AssureID](https://www.acuantcorp.com/products/assureid-identity-verification-software/) to classify and automatically extract metadata from a government-issued ID and add the metadata to content managed in Box.
 
-![Government ID Image](/images/acuant-assure-id-skill.png)
+![Government ID Image](/acuant-assureid-box-skill/images/acuant-assure-id-skill.png)
 
 ## Usage
 
