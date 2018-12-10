@@ -66,7 +66,7 @@ This skill can images with the following extensions:
 DPI of 96 and above is required. For best results, a DPI of 300 is recommended.
 
 ### What metadata is written back to my Box file?
-The skills populates metadata around the ID issuer (Example: Issuer = New York State), the ID-specific metadata (Example: Expiration Date = 01/01/2019), and the ID holder (Example: Name = John Doe).
+The skills populates metadata around the ID issuer (Example: Issuer = New York State), the ID itself (Example: Expiration Date = 01/01/2019), and the ID holder (Example: Name = John Doe).
 
 ### What implications does this have for my business?
 Using Box with Acuant AssureID has the potential to eliminate enormous ammounts of manual data entry using automated data capture that matches human levels of accuracy.
