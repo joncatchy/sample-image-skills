@@ -1,4 +1,4 @@
-# Amazon Label Detection Skill
+# Amazon Detection Skill
 ## Use the Amazon [Rekognition API](https://aws.amazon.com/rekognition/) to automatically extract labels from images and add them to your image files as metadata.
 
 Amazon Rekognition provides image and video analysis. The [DetectLabels](https://docs.aws.amazon.com/rekognition/latest/dg/API_DetectLabels.html) endpoint that is used in this application detects instances of real-world entities that are captured in a provided image. The data that can be returned from using this skill is usually objects, events, or concepts that are present in the image provided (see screenshots folder for example return data)
@@ -36,10 +36,10 @@ To use Serverless, install the NPM module.
 Next, follow our guide on configuring Serverless for AWS, or any of the guides on serverless.com to allow deploying to your favorite serverless provider.
 
 ## Deploying
-Clone this repo and change directory into the amazon-label-skill folder
+Clone this repo and change directory into the amazon-rekognition-labels-detection folder
 
 `git clone https://github.com/box-community/sample-document-skills`
-`cd amazon-label-skill`
+`cd amazon-rekognition-labels-detection`
 
 Deploy to AWS using serverless
 `serverless deploy -v`
