@@ -4,7 +4,7 @@ These are community created Box Skills samples for processing **image files** on
 
 * [Acuant AssureID Government ID Data Extraction](acuant-assureid-goverment-id-data-extraction) - Uses [Acuant AssureID](https://www.acuantcorp.com/products/assureid-identity-verification-software/) to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box. 
 
-* [Amazon Rekognition Labels Detection](amazon-rekognition-labels-detection) - Uses the [Amazon Rekognition] API (https://aws.amazon.com/rekognition) to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards.
+* [Amazon Rekognition Labels Detection](amazon-rekognition-labels-detection) - Uses the [Amazon Rekognition](https://aws.amazon.com/rekognition) API to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards.
 
 * [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.
 
