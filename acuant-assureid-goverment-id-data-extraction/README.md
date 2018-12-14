@@ -1,7 +1,7 @@
 # Acuant AssureID Box Skill
 Use [Acuant AssureID](https://www.acuantcorp.com/products/assureid-identity-verification-software/) to classify and automatically extract metadata from a government-issued ID and add the metadata to content managed in Box.
 
-![Government ID Image](/acuant-assureid-box-skill/images/acuant-assure-id-skill.png)
+![Government ID Image](/acuant-assureid-goverment-id-data-extraction/images/acuant-assure-id-skill.png)
 
 ## Usage
 
@@ -26,8 +26,8 @@ Next, follow our guide on [configuring Serverless for AWS](../AWS_CONFIGURATION.
 Clone this repo and change into the Rossum folder.
 
 ```bash
-git clone https://github.com/box-community/acuant-assureid-box-skill
-cd sample-document-skills/acuant-assureid-box-skill
+git clone https://github.com/box-community/acuant-assureid-goverment-id-data-extraction
+cd sample-document-skills/acuant-assureid-goverment-id-data-extraction
 ```
 
 Then change the `ASSURE_ID_USERNAME`, `ASSURE_ID_PASSWORD`, `ASSURE_ID_SUBSCRIPTION_ID` environment variables in your `serverless.yml`.
