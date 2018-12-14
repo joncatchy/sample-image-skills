@@ -1,16 +1,11 @@
 const rp = require('request-promise-native');
 const { FilesReader, SkillsWriter, SkillsErrorEnum } = require('./skills-kit-2.0');
 
-// these are defined here for demonstration. In production, these should
-// be saved as environment variables or secrets
-const HIVE_API_ENDPOINT = 'YOUR_HIVE_API_ENDPOINT';
-const HIVE_API_KEY = 'YOUR_HIVE_API_KEY';
-
 // A confidence threshold can be used to omit results that are lower
 // than a certain confidence score
 const CONFIDENCE_THRESHOLD = 0.8;
 
-module.exports = async (ctx, cb) => {
+exports.handler = async (ctx, cb) => {
   // Instantiate our Skills Kit helper classes
   const filesReader = new FilesReader(ctx.body_raw);
   const skillsWriter = new SkillsWriter(filesReader.getFileContext());
@@ -23,8 +18,8 @@ module.exports = async (ctx, cb) => {
     const BOX_FILE_URL = filesReader.getFileContext().fileDownloadURL;
     const options = {
       method: 'POST',
-      url: HIVE_API_ENDPOINT,
-      headers: { authorization: `Token ${HIVE_API_KEY}` },
+      url: process.env.HIVE_API_ENDPOINT,
+      headers: { authorization: `Token ${process.env.HIVE_API_KEY}` },
       formData: {
         image_url: BOX_FILE_URL
       }

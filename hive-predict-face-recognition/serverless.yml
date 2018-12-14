@@ -1,0 +1,20 @@
+service: HiveCustomSkill
+provider:
+  name: aws
+  runtime: nodejs8.10  
+  region: us-east-1
+
+functions:
+  index:
+    handler: index.handler
+    name: HiveCustomSkill
+    runtime: nodejs8.10
+    timeout: 120
+    events:
+      - http:
+          method: POST
+          path: HiveCustomSkill
+          cors: true
+    environment:
+      HIVE_API_ENDPOINT: YOUR_HIVE_API_ENDPOINT
+      HIVE_API_KEY: YOUR_HIVE_API_KEY
