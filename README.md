@@ -6,6 +6,8 @@ These are community created Box Skills samples for processing **image files** on
 
 * [Amazon Rekognition Labels Detection](amazon-rekognition-labels-detection) - Uses the [Amazon Rekognition](https://aws.amazon.com/rekognition) API to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards.
 
+* [EXIF/XMP MetaInfo Extraction Skill](exiftool-metainfo-extractio) - Uses the Javascript rewrite of the decade long opensource developed [Exiftool](https://github.com/exiftool/exiftool) to read dozens of MetaInfo from files. Works for all Image, Audio, Video files.
+
 * [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.
 
 **Note:** Box supports [the following image formats](https://community.box.com/t5/How-to-Guides-for-Managing/File-Types-and-Fonts-Supported-in-Box-Content-Preview/ta-p/327#Type_TextBased) to directly load and show in Box Preview. However some of the sample Skills may support a subset or non-overlapping set of document formats given limitations on the machine learning service. You can always expand the file formats supported by your Skills by using the [BasicFormat](https://github.com/box/box-skills-kit-nodejs/tree/master/skills-kit-library#basic-format) functionality in Skills-kit library, which converts files on Box to .jpg format for all image files.
