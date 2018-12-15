@@ -6,7 +6,7 @@ These are community created Box Skills samples for processing **image files** on
 
 * [Amazon Rekognition Labels Detection](amazon-rekognition-labels-detection) - Uses the [Amazon Rekognition](https://aws.amazon.com/rekognition) API to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards.
 
-* [EXIF/XMP MetaInfo Extraction Skill](exiftool-metainfo-extractio) - Uses the Javascript rewrite of the decade long opensource developed [Exiftool](https://github.com/exiftool/exiftool) to read dozens of MetaInfo from files. Works for all Image, Audio, Video files.
+* [EXIF/XMP MetaInfo Extraction Skill](exiftool-metainfo-extraction) - Uses the Javascript rewrite of the decade long opensource developed [Exiftool](https://github.com/exiftool/exiftool) to read dozens of MetaInfo from files. Works for all Image, Audio, Video files.
 
 * [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.
 
