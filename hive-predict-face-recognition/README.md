@@ -55,3 +55,11 @@ Finally, deploy the Skill.
 ```bash
 serverless deploy -v
 ```
+
+At the end of this, you will have an invocation URL for your Lambda function. 
+
+### Set the invocation URL
+
+The final step is to [configure your Box Skill with the invocation URL](https://developer.box.com/docs/configure-a-box-skill) for your Lambda function. You should have received this in the previous, after you deployed the function for the first time.
+
+Once your new skill is called by our code, the Skill usually takes around a few minutes to process and write the new metadata to the file.
