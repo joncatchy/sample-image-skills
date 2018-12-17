@@ -2,7 +2,7 @@
 
 This is a Box skill that uses the [ExifTool library](http://owl.phy.queensu.ca/~phil/exiftool/) to extract MetaInfo from files and write it back to Box as metadata on the file. it supports a large number of different file formats for extracting EXIF/XMP data and other information and works for most image, audio, and video files.
 
-![screenshot](exifimagedemo.png)
+![screenshot](exifimagedemo.jpg)
 
 ## What metadata is extracted?
 
