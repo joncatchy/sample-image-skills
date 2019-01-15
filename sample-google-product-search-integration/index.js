@@ -3,10 +3,6 @@ const { FilesReader, SkillsWriter, SkillsErrorEnum } = require('./library/skills
 var Set = require("collections/set");
 const vision = require('@google-cloud/vision');
 
-function max(price) {
-
-}
-
 exports.skills = async (event, context, callback) => {
     // During code development you can copy an incoming box skills event
     // and paste it within integration-test-request.json file. This static request
