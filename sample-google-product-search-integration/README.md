@@ -94,6 +94,3 @@ The skills populates metadata around the similar product's in your catalog, the 
 
 ### What implications does this have for my business?
 This particular example explores integrating Box with one of AI/ML service that Google offers. Depending on your business needs you can tap into various [AI/ML services](https://cloud.google.com/products/ai/) from Google and automate/enhance your existing capabilities and integrate your file stores with your Business processes.
-
-## License
-This project is licensed under the [Apache 2.0 License](LICENSE.txt)
