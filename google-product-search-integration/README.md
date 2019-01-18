@@ -1,6 +1,6 @@
 # Google Cloud Vision Product Search Box Skill
 
-Use [Google Cloud Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) to create an indexed catalog of products in Google Cloud using the Cloud vision product search API and then compare images in Box with the images in the product catalog. The resulting ranked list of visually and semantically similar results is stored in Box as metadata on the original image.
+Use the [Google Cloud Vision Product Search API](https://cloud.google.com/vision/product-search/docs/) to compare images in Box with the images in a pretrained product catalog. The resultsare written to Box as metadata attached to the original image.
 
 ![Alt text](sample.png?raw=true "Box Skills view, similar products")
 

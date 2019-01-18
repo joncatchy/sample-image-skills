@@ -11,6 +11,8 @@ These are community created Box Skills samples for processing **image files** on
 * [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.
 
 
+* [Google Product Search recognition](google-product-search-integration) - Uses the [Google Cloud Vision Product Search](https://cloud.google.com/vision/product-search/docs/) to compare images in Box with the images in a pretrained product catalog.
+
 ## What are Box Skills?
 
 Box Skills are web applications configured with Box Platform that performs custom processing for files uploaded to Box. Typically they link to a machine learning service that does the processing for the files. Your choice of machine learning service, in-house or external, would depend on your business case or that of your customers on Box. However, the audio, video, image and document sample Skills repositories in Box Community can provide some guidance or inspiration on what you can built upon or deployed as-is.
