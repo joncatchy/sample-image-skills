@@ -1,0 +1,42 @@
+{
+    "name": "serverless-demo-automated",
+    "version": "1.0.0",
+    "description": "Boilerplate Box Skill Code Using Skills-Kit-Lib, Serverless, Eslint, Jest",
+    "scripts": {
+        "format": "NODE_ENV=dev ./node_modules/.bin/prettier \"**/*.js\" --print-width 120 --single-quote --tab-width 4 --write; ./node_modules/.bin/eslint \"**/*.js\" --fix",
+        "test": "NODE_ENV=dev ./node_modules/.bin/jest --coverage",
+        "postinstall": "npm link ./library",
+        "deploy": "npm install;  ./node_modules/.bin/serverless deploy",
+        "undeploy": "NODE_ENV=dev ./node_modules/.bin/serverless remove -v"
+    },
+    "author": "Box <oss@box.com>",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:box/box-skills-kit-nodejs.git"
+    },
+    "homepage": "https://developer.box.com/docs/box-skills",
+    "devDependencies": {
+        "babel-eslint": "^8.2.2",
+        "eslint": "^4.19.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-plugin-import": "^2.9.0",
+        "jest": "^22.4.3",
+        "prettier": "^1.11.1",
+        "serverless": "^1.28.0"
+    },
+    "jest": {
+        "verbose": true
+    },
+    "dependencies": {
+        "@google-cloud/vision": "^0.23.0",
+        "box-node-sdk": "^1.24.0",
+        "collections": "^5.1.5",
+        "jimp": "^0.5.4",
+        "lodash": "^4.17.10",
+        "path": "^0.12.7",
+        "serverless-google-cloudfunctions": "^2.3.2",
+        "url-template": "^2.0.8"
+    }
+}
