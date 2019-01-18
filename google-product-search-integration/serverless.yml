@@ -1,7 +1,7 @@
 # For full Serverless config options, check the docs:
 #    https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/
 
-service: my-quick-automated-demo
+service: google-product-search-integration
 
 # You can change this to any cloud provider:
 # AWS Lambda: <https://aws.amazon.com/lambda/>
@@ -14,9 +14,13 @@ service: my-quick-automated-demo
 provider:
   name: google
   runtime: nodejs8
-  project: <your project id>
+  project: YOUR_PROJECT_NAME
   # the path to the credentials file needs to be absolute
   credentials: ./privatekey.json
+  environment:
+     PROJECT_ID: CHANGE_ME
+     LOCATION: CHANGE_ME
+     SET_ID: CHANGE_ME
 
 plugins:
   - serverless-google-cloudfunctions
@@ -32,10 +36,3 @@ functions:
     handler: skills
     events:
       - http: path
-
-# packaging information
-#package:
-#  include:
-#    - index.js
-#    - package.json
-#    - node_modules

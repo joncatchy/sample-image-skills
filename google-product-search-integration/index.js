@@ -14,7 +14,7 @@ exports.skills = async (event, context, callback) => {
     console.log(data.body);
 
     // instantiate your two skill development helper tools
-    const filesReader = new FilesReader(data.body);
+    const filesReader = new FilesReader(JSON.stringify(data.body));
     const skillsWriter = new SkillsWriter(filesReader.getFileContext());
     const productSearchClient = new vision.ProductSearchClient();
     const imageAnnotatorClient = new vision.ImageAnnotatorClient();
@@ -22,10 +22,10 @@ exports.skills = async (event, context, callback) => {
     // update your project specific details here
     
     const productSetPath = productSearchClient.productSetPath(
-        '<your-project-id>',
-        '<us-east1>',
-        '<product_set1>'
-        );
+        process.env.PROJECT_ID,
+        process.env.LOCATION,
+        process.env.SET_ID
+    );
 
     await skillsWriter.saveProcessingCard();
 
@@ -69,8 +69,6 @@ exports.skills = async (event, context, callback) => {
 
 
           const results = response['responses'][0]['productSearchResults']['results'];
-
-          //console.log(results);
           
           listOfDiscoveredKeywords = new Array();
 
@@ -81,33 +79,11 @@ exports.skills = async (event, context, callback) => {
             if( parseFloat(result['score']) < 0.6 ) {
                 return;
             }
-            /*
-            console.log(result['score']);
-            console.log(result['image']);
-
-            const referenceImageId = result['image'];
-            const formattedName = client.referenceImagePath(
-                                  '<PROJECT-ID>',
-                                    'us-east1',
-                                    'product_set1',
-                                  referenceImageId
-                                );
-            const refImageRequest = {
-            name: formattedName,
-            };
-            
-            const refImageResponse = await client.getReferenceImage(refImageRequest);
-            const image = refImageResponse.uri;
-            var fs = require('fs');
-            var imageFile = fs.readFileSync(image);
-            var encoded = Buffer.from(imageFile).toString('base64');
-            */
 
 
             product_name=result['product'].name.split('/').pop(-1);
             productCategory = result['product'].productCategory;
 
-            //listOfDiscoveredKeywords.push({ text: product_name });
             const labels = result['product']['productLabels']
             
             labels.forEach(label => {

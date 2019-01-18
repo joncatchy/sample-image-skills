@@ -23,11 +23,11 @@ npm install -g serverless
 Next, follow our guide on [configuring Serverless for AWS](../AWS_CONFIGURATION.md), or any of the guides on [serverless.com](https://serverless.com/) to allow deploying to your favorite serverless provider.
 
 
-Clone this repo and change into the Rossum folder.
+Clone this repo and change into the folder.
 
 ```bash
-git clone https://github.com/box-community/acuant-assureid-goverment-id-data-extraction
-cd sample-document-skills/acuant-assureid-goverment-id-data-extraction
+git clone https://github.com/box-community/sample-image-skills
+cd sample-image-skills/acuant-assureid-goverment-id-data-extraction
 ```
 
 Then change the `ASSURE_ID_USERNAME`, `ASSURE_ID_PASSWORD`, `ASSURE_ID_SUBSCRIPTION_ID` environment variables in your `serverless.yml`.
