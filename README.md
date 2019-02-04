@@ -42,8 +42,6 @@ In developing your custom Box Skill, you would need to deploy it somewhere. Have
 * [Esha Verma](https://github.com/eshaverma), Box
 * [Ashok Holla](https://github.com/ashokhollav), Google
 
-
-
 ## License
 
 This project is licensed under the [Apache 2.0 License](LICENSE)
