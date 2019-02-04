@@ -35,6 +35,14 @@ The [Github Repository for Box Skills Kit Library](https://github.com/box/box-sk
 
 In developing your custom Box Skill, you would need to deploy it somewhere. Have a look at our [Quick Start Deployment Instructions](https://github.com/box/box-skills-kit-nodejs/tree/master/boilerplate-skills) to learn how to deploy the boilerplate Skills to any of your preferred cloud server providers or on your own server environment. Additionally, each of the sample Skills in this repository may give extra or alternative deployment instructions, that you can use.
 
+## Contributors
+
+* [Kyle Adams](https://github.com/kylefernandadams), Box
+* [Wes Byers](https://github.com/wbyers), Box
+* [Esha Verma](https://github.com/eshaverma), Box
+* [Ashok Holla](https://github.com/ashokhollav), Google
+
+
 
 ## License
 
