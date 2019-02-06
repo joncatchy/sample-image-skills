@@ -2,15 +2,17 @@
 
 These are community created Box Skills samples for processing **image files** on Box. By clicking on each sub-folder, you can see a demo image of the end product, as it would look in your Box file preview.
 
-- [Acuant AssureID Government ID Data Extraction](acuant-assureid-goverment-id-data-extraction) - Uses [Acuant AssureID](https://www.acuantcorp.com/products/assureid-identity-verification-software/) to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box.
+* [Acuant AssureID Government ID Data Extraction](acuant-assureid-goverment-id-data-extraction) - Uses [Acuant AssureID](https://www.acuantcorp.com/products/assureid-identity-verification-software/) to classify and automatically extract metadata from a government-issued ID, such as name, numbers, address, etc, and add them as Skills Metadata Cards to the respective image files on Box.
 
-- [Amazon Rekognition Labels Detection](amazon-rekognition-labels-detection) - Uses the [Amazon Rekognition](https://aws.amazon.com/rekognition) API to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards.
+* [Amazon Rekognition Labels Detection](amazon-rekognition-labels-detection) - Uses the [Amazon Rekognition](https://aws.amazon.com/rekognition) API to automatically extract labels, which are objects, events, or concepts that are present in the image provided and add them to the respective image files as Skills Metadata Cards.
 
-- [EXIF/XMP MetaInfo Extraction Skill](exiftool-metainfo-extraction) - Uses the Javascript rewrite of the decade long opensource developed [Exiftool](https://github.com/exiftool/exiftool) to read dozens of MetaInfo from files. Works for all Image, Audio, Video files.
+* [EXIF/XMP MetaInfo Extraction Skill](exiftool-metainfo-extraction) - Uses the Javascript rewrite of the decade long opensource developed [Exiftool](https://github.com/exiftool/exiftool) to read dozens of MetaInfo from files. Works for all Image, Audio, Video files.
 
-- [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.
+* [Hive Predict face recognition](hive-predict-face-recognition) - Uses the [Hive Predict](https://thehive.ai/predict) API to automatically recognize faces in images and assign these faces as Skills Metadata Cards to the respective images in Box.
 
-- [Cloud Vision label detection](cloud-vision-label-detection) - Uses the [Google Vision](https://cloud.google.com/vision/) API to automatically extract metadata from a clothing retailer catalog picture and add the metadata to content managed in Box.
+* [Cloud Vision label detection](cloud-vision-label-detection) - Uses the [Google Vision](https://cloud.google.com/vision/) API to automatically extract metadata from a clothing retailer catalog picture and add the metadata to content managed in Box.
+
+* [Google Product Search recognition](google-product-search-integration) - Uses the [Google Cloud Vision Product Search](https://cloud.google.com/vision/product-search/docs/) to compare images in Box with the images in a pretrained product catalog.
 
 ## What are Box Skills?
 
@@ -33,6 +35,13 @@ The [Github Repository for Box Skills Kit Library](https://github.com/box/box-sk
 ## How do I deploy a Box Skill?
 
 In developing your custom Box Skill, you would need to deploy it somewhere. Have a look at our [Quick Start Deployment Instructions](https://github.com/box/box-skills-kit-nodejs/tree/master/boilerplate-skills) to learn how to deploy the boilerplate Skills to any of your preferred cloud server providers or on your own server environment. Additionally, each of the sample Skills in this repository may give extra or alternative deployment instructions, that you can use.
+
+## Contributors
+
+* [Kyle Adams](https://github.com/kylefernandadams), Box
+* [Wes Byers](https://github.com/wbyers), Box
+* [Esha Verma](https://github.com/eshaverma), Box
+* [Ashok Holla](https://github.com/ashokhollav), Google
 
 ## License
 
